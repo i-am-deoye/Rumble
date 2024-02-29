@@ -1,4 +1,4 @@
-![Rumble: Abstracted MVVM Clean Architecture (Domain Use cases & Data) library written in Swift.](https://)
+![Rumble: Abstracted MVVM Clean Architecture (Domain Use cases & Data) library written in Swift.]
 
 [![Swift](https://img.shields.io/badge/Swift-5.7_5.8_5.9-orange?style=flat-square)](https://img.shields.io/badge/Swift-5.7_5.8_5.9-Orange?style=flat-square)
 [![Platforms](https://img.shields.io/badge/Platforms-macOS_iOS-yellowgreen?style=flat-square)](https://img.shields.io/badge/Platforms-macOS_iOS-Green?style=flat-square)
@@ -14,14 +14,14 @@ Rumble is an Abstracted MVVM Clean Architecture (Domain Use cases & Data) librar
 ## Features
 
 - [x] Network & Database Property Wrapper
-- [x] Upload File ( Coming soon)
-- [x] Download File (Coming soon)
+- [] Upload File ( Coming soon)
+- [] Download File (Coming soon)
 - [x] Authentication with `URLCredential`
 - [x] SSL Pinning
 - [x] Biometric Touch & Face ID
 - [x] Dynamically saving & injecting sensisitive data from response to http headers respectively.
 - [x] UserDefaults property wrapper for both Objects (Codable) & Literals (Int,  Bool, String, Array, Dictionary)
-- [x] SQLQuery DSL (coming soon)
+- [] SQLQuery DSL (coming soon)
 
 ## Write Usecases / Business logics Fast!
 
