@@ -12,7 +12,7 @@ public protocol SQLQuery: Query {}
 
 
 
-public struct DefaultSQLQuery: SQLQuery {
+public class DefaultSQLQuery: SQLQuery {
     public var value: String {
         return _query
     }
@@ -23,7 +23,7 @@ public struct DefaultSQLQuery: SQLQuery {
     public init(){}
     
     
-    @discardableResult public mutating func equal(key:String, value:Any) -> Self {
+    @discardableResult public func equal(key:String, value:Any) -> Self {
         _query = _query + "\(key) == \(formatValue(value))"
         return self
     }

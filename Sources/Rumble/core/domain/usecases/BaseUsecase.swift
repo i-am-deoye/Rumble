@@ -12,6 +12,6 @@ open class BaseUsecase {
     
     public required init() {}
     
-    func commit(type: HTTPHeadersInterceptor) {  }
+    func commit(type: HTTPHeadersInterceptor) async {}
 }
 

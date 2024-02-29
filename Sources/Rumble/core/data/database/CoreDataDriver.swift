@@ -9,9 +9,9 @@ import Foundation
 import CoreData
 
 
-final class CoreDataDriver: IDataBaseDriver {
+public final class CoreDataDriver: IDataBaseDriver {
     
-    static let shared = CoreDataDriver()
+    public static let shared = CoreDataDriver()
     var context: NSManagedObjectContext!
     var psc : NSPersistentStoreCoordinator?
     
@@ -60,7 +60,7 @@ final class CoreDataDriver: IDataBaseDriver {
         return request
     }
     
-    @discardableResult func save<T>(_ entity: T) async -> Saved {
+    @discardableResult public func save<T>(_ entity: T) async -> Saved {
         guard let entity = entity as? NSManagedObject else { return Saved.init(value: false, error: "inavlid entity type") }
         
         do {
@@ -71,7 +71,7 @@ final class CoreDataDriver: IDataBaseDriver {
         }
     }
     
-    @discardableResult func save<T>(_ entities: [T]) async -> Saved {
+    @discardableResult public func save<T>(_ entities: [T]) async -> Saved {
         var session = [T]()
         var isError = false
         for entity in entities {
@@ -92,7 +92,7 @@ final class CoreDataDriver: IDataBaseDriver {
         return Saved.init(value: true)
     }
     
-    func update<T>(_ entity: T, query: SQLQuery) async -> Saved {
+    public func update<T>(_ entity: T, query: SQLQuery) async -> Saved {
         await save(entity)
     }
     
@@ -101,16 +101,16 @@ final class CoreDataDriver: IDataBaseDriver {
     }
     
     
-    @discardableResult func fetch<T>(_ type: T.Type, query: SQLQuery) async -> Fetched<[T]> {
+    @discardableResult public func fetch<T>(_ type: T.Type, query: SQLQuery) async -> Fetched<[T]> {
         return await self._fetch(type, query: query.value)
     }
     
-    @discardableResult func fetch<T>(_ type: T.Type) async -> Fetched<[T]> {
+    @discardableResult public func fetch<T>(_ type: T.Type) async -> Fetched<[T]> {
         return await self._fetch(type)
     }
     
     
-    @discardableResult func delete<T>(_ entity: T) async -> Deleted {
+    @discardableResult public func delete<T>(_ entity: T) async -> Deleted {
         guard let entity = entity as? NSManagedObject else { return Deleted.init(value: false, error: "inavlid entity type") }
         entity.managedObjectContext?.delete(entity)
         return Deleted.init(value: true, error: nil)
@@ -127,7 +127,7 @@ final class CoreDataDriver: IDataBaseDriver {
         return Deleted.init(value: deletedCount == entities.count, error: nil)
     }
     
-    @discardableResult func delete<T>(_ type: T.Type, query: SQLQuery) async -> Deleted {
+    @discardableResult public func delete<T>(_ type: T.Type, query: SQLQuery) async -> Deleted {
         guard let items = await _fetch(type, query: query.value).value else { return Deleted.init(value: false, error: "unable to delete items")}
         return await deleteAll(items)
         

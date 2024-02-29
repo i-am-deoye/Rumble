@@ -10,3 +10,4 @@ import Foundation
 public protocol CIdentifiable<ID> where ID == any Hashable {
     associatedtype ID
 }
+
