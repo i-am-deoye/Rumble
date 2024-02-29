@@ -14,14 +14,14 @@ Rumble is an Abstracted MVVM Clean Architecture (Domain Use cases & Data) librar
 ## Features
 
 - [x] Network & Database Property Wrapper
-- [] Upload File ( Coming soon)
-- [] Download File (Coming soon)
+- [x] Upload File ( Coming soon)
+- [x] Download File (Coming soon)
 - [x] Authentication with `URLCredential`
 - [x] SSL Pinning
 - [x] Biometric Touch & Face ID
 - [x] Dynamically saving & injecting sensisitive data from response to http headers respectively.
 - [x] UserDefaults property wrapper for both Objects (Codable) & Literals (Int,  Bool, String, Array, Dictionary)
-- [] SQLQuery DSL (coming soon)
+- [x] SQLQuery DSL (coming soon)
 
 ## Write Usecases / Business logics Fast!
 
