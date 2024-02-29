@@ -1,4 +1,4 @@
-![Rumble: Abstracted MVVM Clean Architecture (Domain Use cases & Data) library written in Swift.]
+![Rumble: Elegant Networking in Swift](https://)
 
 [![Swift](https://img.shields.io/badge/Swift-5.7_5.8_5.9-orange?style=flat-square)](https://img.shields.io/badge/Swift-5.7_5.8_5.9-Orange?style=flat-square)
 [![Platforms](https://img.shields.io/badge/Platforms-macOS_iOS-yellowgreen?style=flat-square)](https://img.shields.io/badge/Platforms-macOS_iOS-Green?style=flat-square)
